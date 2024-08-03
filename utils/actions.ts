@@ -47,3 +47,9 @@ export const fetchSingleProduct = async (productId: string) => {
   }
   return product;
 };
+
+export const createProductAction = async (formData: FormData) => {
+  'use server';
+  const name = formData.get('name') as string;
+  console.log('name:', name);
+};
