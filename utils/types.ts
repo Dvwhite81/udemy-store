@@ -1,3 +1,5 @@
+import { Prisma } from '@prisma/client';
+
 export type NavLink = {
   href: string;
   label: string;
@@ -25,3 +27,7 @@ export type CartState = {
   tax: number;
   orderTotal: number;
 };
+
+export type CartItemWithProduct = Prisma.CartItemGetPayload<{
+  include: { product: true };
+}>;

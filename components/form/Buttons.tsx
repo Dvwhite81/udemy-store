@@ -107,3 +107,13 @@ export function CardSubmitButton({ isFavorite }: { isFavorite: boolean }) {
     </Button>
   );
 }
+
+export function ProductSignInButton() {
+  return (
+    <SignInButton mode="modal">
+      <Button className="mt-8" type="button" size="default">
+        Please Sign In
+      </Button>
+    </SignInButton>
+  );
+}
